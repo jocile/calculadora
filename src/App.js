@@ -22,13 +22,14 @@ const App = () => {
   }
 
   const handleSumNumbers = () => {
-    if (firstNumber === '0') {
-      setFirstNumber(String(currentNumber))
-      setCurrentNumber('0')
-      setOperation('+')
-    } else {
-      const sum = Number(firstNumber) + Number(currentNumber)
+    if(firstNumber === '0'){
+        setFirstNumber(String(currentNumber));
+        setCurrentNumber('0')
+        setOperation('+')
+    }else {
+      const sum = Number(firstNumber) + Number(currentNumber);
       setCurrentNumber(String(sum))
+      setOperation('')
     }
   }
 
@@ -96,7 +97,7 @@ const App = () => {
   return (
     <Container>
       <Content>
-        <Input value={currentNumber} />
+        <Input value={operation ? `${firstNumber} ${operation} ${currentNumber}` : currentNumber} />
         <Row>
           <Button label="x" onClick={handleMultiplyNumbers} />
           <Button label="/" onClick={handleDivideNumbers} />
