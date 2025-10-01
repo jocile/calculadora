@@ -1,27 +1,55 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Calculadora Simples com React
 
-## Available Scripts
+Este projeto demonstra como o React pode ser utilizado para criar uma calculadora simples, com operações básicas de soma, subtração, multiplicação e divisão.
 
-In the project directory, you can run:
+## Por que usar React para uma calculadora?
 
-### `npm start`
+O React facilita a criação de interfaces dinâmicas e reativas. Com ele, é possível atualizar a tela automaticamente sempre que o usuário interage com os botões da calculadora, sem precisar manipular o DOM manualmente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Como funciona a calculadora
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Componentização:** Cada parte da calculadora (botão, display, layout) é um componente React reutilizável.
+- **Estado:** O React gerencia os valores digitados, a operação selecionada e o resultado usando o hook `useState`.
+- **Eventos:** As funções de clique dos botões atualizam o estado, que por sua vez atualiza a interface automaticamente.
 
-### `npm test`
+## Estrutura dos arquivos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `src/App.js`: Componente principal, onde está a lógica da calculadora.
+- `src/components/Button`: Componente de botão reutilizável.
+- `src/components/Input`: Componente de display da calculadora.
+- `src/styles.js`: Estilos globais e de layout.
 
-### `npm run build`
+## Exemplo de funcionamento
 
-Builds the app for production to the `build` folder.\
+1. O usuário digita um número clicando nos botões.
+2. Ao clicar em uma operação (`+`, `-`, `x`, `/`), o número e a operação são armazenados no estado.
+3. O usuário digita o próximo número.
+4. Ao clicar em `=`, o resultado é calculado e exibido.
+
+## Como executar
+
+1. Instale as dependências:
+
+```bash
+npm install
+```
+
+1. Inicie o projeto:
+
+```bash
+npm start
+```
+
+1. Acesse [http://localhost:3000](http://localhost:3000) no navegador.
+
+## Personalização
+
+Você pode adicionar novas operações, melhorar o layout ou criar novas funcionalidades facilmente, aproveitando a modularidade dos componentes React.
+
+---
+
+**React** é uma ótima escolha para projetos interativos como uma calculadora, pois facilita a atualização da interface e a organização do código.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
